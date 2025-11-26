@@ -57,7 +57,7 @@ body {
     border-radius: 25px; /* Coincide con el input */
     background: linear-gradient(45deg, #007bff, #0056b3); /* Degradado sutil */
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 10px;
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra suave */
     transition: all 0.3s ease-in-out;
 }
@@ -77,7 +77,7 @@ body {
 
 /* El contenedor principal de la carta */
 .card {
-    background-color: white;
+    background-color: darkorange;
     width: 300px; /* Ancho fijo para que parezca carta */
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra profunda */
