@@ -1,0 +1,17 @@
+﻿# Artefactos de compilación
+bin/
+obj/
+
+# Archivos de Visual Studio
+*.suo
+*.user
+.vs/
+
+# Archivos de entorno de desarrollo
+node_modules/
+*.log
+tmp/
+
+# Archivos de configuración local
+local.settings.json
+appsettings.Development.json
