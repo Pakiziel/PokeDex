@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más limpia */
+}
+
+body {
+    background-color: #f4f7f6; /* Un fondo gris muy suave para que resalte la tarjeta */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- CONTENEDOR PRINCIPAL Y FORMULARIO --- */
+.contenedorDeTarjetas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 400px; /* Evita que sea gigante en pantallas grandes */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+    .form-group input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 25px; /* Bordes redondeados modernos */
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+        .form-group input:focus {
+            border-color: #007bff;
+        }
+
+/* --- BOTÓN --- */
+.btn-primary {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 25px; /* Coincide con el input */
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Degradado sutil */
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra suave */
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-primary:hover {
+        
+        background: linear-gradient(45deg, #0056b3, #004494);
+        transform: translateY(-5px); /* Efecto de elevación */
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .btn-primary:active {
+        transform: scale(0.98);
+    }
+
+/* --- ESTILOS DE LA TARJETA POKEMON (Generada por JS) --- */
+
+/* El contenedor principal de la carta */
+.card {
+    background-color: white;
+    width: 300px; /* Ancho fijo para que parezca carta */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra profunda */
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s ease;
+    text-align: center; /* Centrar todo el texto */
+    position: relative;
+}
+
+    .card:hover {
+        transform: translateY(-10px); /* La carta flota al pasar el mouse */
+    }
+
+/* La imagen del Pokémon */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    padding: 20px;
+    /* Fondo circular radial para resaltar al pokemon */
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,245,255,1) 100%);
+    border-bottom: 1px solid #eee;
+}
+
+/* Cuerpo de la carta (Título) */
+.card-body {
+    padding: 15px 20px 5px 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 800;
+    text-transform: capitalize; /* Convierte "pikachu" en "Pikachu" */
+    margin-bottom: 5px;
+}
+
+/* Lista de Tipos (Convertida a etiquetas/badges) */
+.list-group {
+    list-style: none; /* Quitar puntos de lista */
+    padding: 0 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los tipos */
+    margin-top: 10px;
+}
+
+.list-group-item {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 15px;
+    border-radius: 20px; /* Forma de píldora */
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #ddd;
+}
+
+.pb-3 {
+    display: flex;
+}

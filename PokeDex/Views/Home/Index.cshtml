@@ -1,0 +1,22 @@
+﻿@model Generations
+<div class="form-group">
+    <label>Nombre del Pokemón</label>
+    <input type="text"
+           list="mis-opciones-pokemon"
+           class="form-control"
+           placeholder="Escribe para buscar..." />
+
+    <button type="button" class="btn btn-primary">PokeBotón! </button>
+</div>
+
+<datalist id="mis-opciones-pokemon">
+    @foreach (UnPokemon pokemon in Model.pokemon_species)
+    {
+        <option value="@pokemon.name"> </option>
+    }
+
+</datalist>
+
+<div class="contenedorDeTarjetas">
+
+</div>
