@@ -1,3 +1,22 @@
+:root {
+    --earth: linear-gradient(11deg,rgba(139, 69, 19, 1) 12%, rgba(222, 184, 135, 1) 46%, rgba(210, 105, 30, 1) 67%);
+    --water: linear-gradient(323deg,rgba(9, 9, 121, 1) 35%, rgba(3, 145, 211, 1) 66%, rgba(0, 212, 255, 1) 100%);
+    --fire: linear-gradient(322deg,rgba(255, 105, 180, 1) 0%, rgba(253, 31, 33, 1) 40%, rgba(255, 69, 0, 1) 100%);
+    --normal: linear-gradient(53deg,rgba(199, 21, 133, 1) 24%, rgba(148, 46, 226, 1) 58%, rgba(252, 70, 237, 1) 90%);
+    --electric: linear-gradient(31deg,rgba(245, 251, 63, 1) 24%, rgba(250, 195, 68, 1) 50%, rgba(252, 213, 70, 1) 90%);
+    --bug: linear-gradient(41deg,rgba(83, 155, 42, 1) 25%, rgba(131, 189, 86, 1) 53%, rgba(87, 199, 133, 1) 75%);
+    --ghost: linear-gradient(23deg,rgba(63, 94, 251, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(231, 67, 243, 1) 99%);
+    --psychic: linear-gradient(9deg,rgba(251, 242, 63, 1) 0%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%);
+    --poison: linear-gradient(32deg,rgba(238, 174, 202, 1) 27%, rgba(0, 0, 0, 1) 55%, rgba(148, 187, 233, 1) 79%);
+    --ice: linear-gradient(318deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 9%, rgba(240, 240, 240, 1) 66%);
+    --dragon: linear-gradient(318deg,rgba(2, 0, 36, 1) 0%, rgba(222, 222, 222, 1) 45%, rgba(112, 112, 112, 1) 66%);
+    --fighting: linear-gradient(205deg,rgba(208, 162, 242, 1) 34%, rgba(253, 29, 29, 1) 44%, rgba(252, 176, 69, 1) 57%);
+    --rock: linear-gradient(229deg,rgba(0, 0, 0, 1) 36%, rgba(151, 151, 151, 1) 52%, rgba(117, 117, 117, 1) 63%);
+    --fairy: linear-gradient(46deg,rgba(209, 13, 163, 1) 48%, rgba(230, 0, 0, 1) 22%, rgba(235, 73, 73, 1) 71%);
+    --flying: linear-gradient(30deg,rgba(0, 212, 255, 1) 43%, rgba(9, 9, 121, 1) 50%, rgba(255, 255, 255, 1) 38%);
+    --bug: linear-gradient(37deg,rgba(29, 184, 106, 1) 38%, rgba(2, 84, 39, 1) 53%, rgba(45, 253, 59, 1) 36%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -63,7 +82,6 @@ body {
 }
 
     .btn-primary:hover {
-        
         background: linear-gradient(45deg, #0056b3, #004494);
         transform: translateY(-5px); /* Efecto de elevación */
         box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
@@ -109,7 +127,6 @@ body {
 
 .card-title {
     font-size: 1.5rem;
-    color: #333;
     font-weight: 800;
     text-transform: capitalize; /* Convierte "pikachu" en "Pikachu" */
     margin-bottom: 5px;
@@ -139,4 +156,67 @@ body {
 
 .pb-3 {
     display: flex;
+}
+.earth{
+    background: var(--earth);
+    color: white;
+}
+
+.water{
+    background: var(--water);
+    color: white;
+}
+
+.fire {
+    background: var(--fire);
+    color:white;
+}
+
+.normal{
+    background: var(--normal);
+    color:white;
+}
+.electric {
+    background: var(--electric);
+    color: black;
+}
+.bug {
+    background: var(--bug);
+    color: white;
+}
+.ghost {
+    background: var(--ghost);
+    color: white;
+}
+.psychic {
+    background: var(--psychic);
+    color: white;
+}
+.poison {
+    background: var(--poison);
+    color: white;
+}
+.ice {
+    background: var(--ice);
+    color: black;
+}
+.dragon {
+    background: var(--dragon);
+    color: black;
+}
+.fighting {
+    background: var(--fighting);
+    color: white;
+}
+.rock {
+    background: var(--rock);
+    color: white;
+}
+.fairy {
+    background: var(--fairy);
+    color: white;
+}
+.flying {
+    background: var(--flying);
+    color: black;
 }

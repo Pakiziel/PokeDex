@@ -27,8 +27,60 @@
             pokeTipo.classList.add('list-group-item');
             pokeTipo.textContent = response;
             tipos.append(pokeTipo);
-           
+            switch (response) {
+                case "ground":
+                    tarjeta.classList.add('earth');
+                    break;
+                case "water":
+                    tarjeta.classList.add('water');
+                    break;
+                case "fire":
+                    tarjeta.classList.add('fire');
+                    break;
+                case "normal":
+                    tarjeta.classList.add('normal');
+                    break;
+                case "electric":
+                    tarjeta.classList.add('electric');
+                    break;
+                case "bug":
+                    tarjeta.classList.add('bug');
+                    break;
+                case "ghost":
+                    tarjeta.classList.add('ghost');
+                    break;
+                case "psychic":
+                    tarjeta.classList.add('psychic');
+                    break;
+                case "poison":
+                    tarjeta.classList.add('poison');
+                    break;
+                case "ice":
+                    tarjeta.classList.add('ice');
+                    break;
+                case "dragon":
+                    tarjeta.classList.add('dragon');
+                    break;
+                case "fighting":
+                    tarjeta.classList.add('fighting');
+                    break;
+                case "rock":
+                    tarjeta.classList.add('rock');
+                    break;
+                case "fairy":
+                    tarjeta.classList.add('fairy');
+                    break;
+                case "flying":
+                    tarjeta.classList.add('flying');
+                    break;
+                case "bug":
+                    tarjeta.classList.add('bug');
+                    break;
+
+            }
+
         }
+
 
         const cuerpoCarta = document.createElement('div');
         cuerpoCarta.classList.add('card-body')
@@ -44,7 +96,6 @@
         contenedor.append(tarjeta);
 
     }
-
 
     const alHacerClick = async (evento) => {
         const CajadeTexto = evento.target.parentNode.querySelector('input');
