@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Letras Pokemon';
+    src: local('Letras Pokemon') url('https://fonts.cdnfonts.com/css/pokemon-solid');
+}
+
 :root {
     --earth: linear-gradient(11deg,rgba(139, 69, 19, 1) 12%, rgba(222, 184, 135, 1) 46%, rgba(210, 105, 30, 1) 67%);
     --water: linear-gradient(323deg,rgba(9, 9, 121, 1) 35%, rgba(3, 145, 211, 1) 66%, rgba(0, 212, 255, 1) 100%);
@@ -21,7 +26,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más limpia */
+    font-family: 'Letras Pokemon',Arial, Helvetica, sans-serif
 }
 
 body {
@@ -154,69 +159,96 @@ body {
     border: 1px solid #ddd;
 }
 
+.miPokeTitulo {
+    color: black;
+    font-size: 200%;
+    font-family: 'Pokemon Solid', sans-serif;
+    display: inline-block;
+    color: black;
+    -webkit-text-fill-color: #ffcc03; /* Will override color (regardless of order) */
+    -webkit-text-stroke: 3px black;
+}
+
 .pb-3 {
     display: flex;
 }
-.earth{
+
+.earth {
     background: var(--earth);
     color: white;
 }
 
-.water{
+.water {
     background: var(--water);
     color: white;
 }
 
 .fire {
     background: var(--fire);
-    color:white;
+    color: white;
 }
 
-.normal{
+.normal {
     background: var(--normal);
-    color:white;
+    color: white;
 }
+
 .electric {
     background: var(--electric);
     color: black;
 }
+
 .bug {
     background: var(--bug);
     color: white;
 }
+
 .ghost {
     background: var(--ghost);
     color: white;
 }
+
 .psychic {
     background: var(--psychic);
     color: white;
 }
+
 .poison {
     background: var(--poison);
     color: white;
 }
+
 .ice {
     background: var(--ice);
     color: black;
 }
+
 .dragon {
     background: var(--dragon);
     color: black;
 }
+
 .fighting {
     background: var(--fighting);
     color: white;
 }
+
 .rock {
     background: var(--rock);
     color: white;
 }
+
 .fairy {
     background: var(--fairy);
     color: white;
 }
+
 .flying {
     background: var(--flying);
+    color: black;
+}
+
+.bug {
+    background: var(--bug);
     color: black;
 }
