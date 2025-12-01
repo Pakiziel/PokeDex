@@ -28,7 +28,7 @@ namespace PokeDEx.Controllers
         [HttpPost]
         public async Task<IActionResult> UnicoPokemon([FromBody] string nombre)
         {
-            if (_counter == 3)
+            if (_counter == 2)
             {
                 return Json(new
                 {

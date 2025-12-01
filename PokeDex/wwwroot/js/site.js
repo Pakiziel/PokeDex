@@ -6,7 +6,6 @@
     const crearTarjetas = (pokemon) => {
 
         const contenedor = document.querySelector('.contenedorDeTarjetas');
-        contenedor.innerHTML = '';
         const tarjeta = document.createElement('div');
         tarjeta.classList.add('card');
         tarjeta.classList.add('p-3');
@@ -110,7 +109,7 @@
             const RespuestaServidor = await response.json();
             if (RespuestaServidor.pokemon == undefined) {
                 Swal.fire({
-                    icon: "Error",
+                    icon: "error",
                     title: "❌Oops...",
                     text: "¡Haz alcanzado el número máximo de tarjetas!",
                     confirmButtonText: 'Aceptar',
