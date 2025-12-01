@@ -29,6 +29,10 @@
     font-family: 'Letras Pokemon',Arial, Helvetica, sans-serif
 }
 
+.rojo {
+    color: red;
+}
+
 body {
     background-color: #f4f7f6; /* Un fondo gris muy suave para que resalte la tarjeta */
     min-height: 100vh;

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using Microsoft.AspNetCore.Mvc;
 using PokeDEx.Models;
 using PokeDEx.Util;
@@ -7,6 +8,7 @@ namespace PokeDEx.Controllers
 {
     public class HomeController : Controller
     {
+        private static int _counter = 0;
         private readonly ILogger<HomeController> _logger;
 
         private readonly PokeClient pokeClient;
@@ -26,13 +28,26 @@ namespace PokeDEx.Controllers
         [HttpPost]
         public async Task<IActionResult> UnicoPokemon([FromBody] string nombre)
         {
-            Pokemon? Pokemon1 = await pokeClient.GetPokemon(nombre);
+            if (_counter == 3)
+            {
+                return Json(new
+                {
+                    message = "Ha alcanzado el numero maximo de Tarjetas"
+                });
+
+            } else
+            {
+                _counter++;
+            }
+                Pokemon? Pokemon1 = await pokeClient.GetPokemon(nombre);
             return Json(new
             {
                 pokemon = Pokemon1
             }
             );
         }
+
+        
 
         public IActionResult Privacy()
         {

@@ -16,11 +16,20 @@ namespace PokeDEx.Util
             var response = await Client.GetAsync($"https://pokeapi.co/api/v2/pokemon/{id}/");
             var content = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<Pokemon>(content);
+
+
         }
 
         public async Task<Generations> FirstGenPokemon()
         {
             var response = await Client.GetAsync($"https://pokeapi.co/api/v2/generation/1");
+            var content = await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Generations>(content);
+        }
+
+        public async Task<Generations> SecondGenPokemon()
+        {
+            var response = await Client.GetAsync($"https://pokeapi.co/api/v2/generation/2");
             var content = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<Generations>(content);
         }

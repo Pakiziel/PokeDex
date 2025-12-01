@@ -97,6 +97,7 @@
 
     }
 
+
     const alHacerClick = async (evento) => {
         const CajadeTexto = evento.target.parentNode.querySelector('input');
         if (CajadeTexto.value != '') {
@@ -107,7 +108,24 @@
             });
 
             const RespuestaServidor = await response.json();
-            crearTarjetas(RespuestaServidor.pokemon);
+            if (RespuestaServidor.pokemon == undefined) {
+                Swal.fire({
+                    icon: "Error",
+                    title: "❌Oops...",
+                    text: "¡Haz alcanzado el número máximo de tarjetas!",
+                    confirmButtonText: 'Aceptar',
+                    footer: '<span class="rojo" >Este mensaje se cerrará automáticamente</span>',
+                    backdrop: true,
+                    timer: 5000,
+                    timerProgressBar: true,
+                    padding: '1rem',
+                    showCloseButton: true,
+
+                })
+            } else {
+                crearTarjetas(RespuestaServidor.pokemon);
+
+            }
         }
     }
 
