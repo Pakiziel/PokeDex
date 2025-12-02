@@ -33,6 +33,16 @@
     color: red;
 }
 
+.botonPelea {
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 10px;
+    width: 50%;
+    letter-spacing: 10px;
+}
+
+
+
 body {
     background-image: url('../Files/puebloPaleta.webp');
     background-repeat:round;
@@ -190,8 +200,12 @@ body {
     -webkit-text-stroke: 3px black;
 }
 
-.pb-3 {
-    display: flex;
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 90% 10%;
+    height: 80vh;
+    
 }
 
 .earth {

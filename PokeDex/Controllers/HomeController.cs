@@ -24,6 +24,11 @@ namespace PokeDEx.Controllers
             Generations Pokemon1 = await pokeClient.FirstGenPokemon();
             return View(Pokemon1);
         }
+        /// <summary>
+        /// funcion que devuelve un Pokemon por nombre
+        /// </summary>
+        /// <param name="nombre">Recibe del body de la petición un string nombre</param>
+        /// <returns>Devuelve un pokemon o nulo o un mensaje</returns>
 
         [HttpPost]
         public async Task<IActionResult> UnicoPokemon([FromBody] string nombre)
@@ -47,10 +52,13 @@ namespace PokeDEx.Controllers
             }
             );
         }
-
+        /// <summary>
+        /// Le resta uno al contador 
+        /// </summary>
+        /// <returns>Devuelve un mensaje</returns>
         public IActionResult AcompletandoTarjetas()
         {
-            _counter = _counter -1;
+            _counter = _counter - 1;
 
             return Json(new
             {
@@ -58,8 +66,6 @@ namespace PokeDEx.Controllers
             }
             );
         }
-
-
 
         public IActionResult Privacy()
         {

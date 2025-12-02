@@ -4,6 +4,8 @@
 
     const botonManipulacion = document.querySelector('.btn');
 
+    let tarjetaExistente = 0;
+
     const crearTarjetas = (pokemon) => {
 
         const contenedor = document.querySelector('.contenedorDeTarjetas');
@@ -81,6 +83,11 @@
 
         }
 
+        tarjetaExistente += 1;
+        if (tarjetaExistente == 2) {
+            const muestraBoton = document.querySelector(".botonPelea");
+            muestraBoton.removeAttribute('hidden');
+        }
 
         const cuerpoCarta = document.createElement('div');
         cuerpoCarta.classList.add('card-body')
@@ -107,7 +114,10 @@
         const botonCerrar = evento.target.parentNode;
         botonCerrar.remove();
 
-    const response = await fetch('/Home/AcompletandoTarjetas')
+        const response = await fetch('/Home/AcompletandoTarjetas')
+        tarjetaExistente = tarjetaExistente - 1;
+        const muestraBoton = document.querySelector(".botonPelea");
+        muestraBoton.setAttribute("hidden", true);
     }
 
 
@@ -142,9 +152,6 @@
         }
     }
 
-
-
     botonManipulacion.addEventListener('click', alHacerClick, false);
-
 
 })();
