@@ -1,4 +1,5 @@
 ﻿"use strict";
+
 (() => {
 
     const botonManipulacion = document.querySelector('.btn');
@@ -92,8 +93,21 @@
         tarjeta.append(cuerpoCarta);
         tarjeta.append(tipos);
 
-        contenedor.append(tarjeta);
+        const botonCerrar = document.createElement('button');
+        botonCerrar.addEventListener('click', cerrarTarjeta, false);
+        botonCerrar.classList.add('button');
+        botonCerrar.textContent = 'X';
+        botonCerrar.classList.add('btn-cerrar');
+        tarjeta.append(botonCerrar);
 
+        contenedor.append(tarjeta);
+    }
+
+    const cerrarTarjeta = async (evento) => {
+        const botonCerrar = evento.target.parentNode;
+        botonCerrar.remove();
+
+    const response = await fetch('/Home/AcompletandoTarjetas')
     }
 
 
@@ -128,6 +142,9 @@
         }
     }
 
+
+
     botonManipulacion.addEventListener('click', alHacerClick, false);
+
 
 })();

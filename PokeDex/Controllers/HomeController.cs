@@ -35,11 +35,12 @@ namespace PokeDEx.Controllers
                     message = "Ha alcanzado el numero maximo de Tarjetas"
                 });
 
-            } else
+            }
+            else
             {
                 _counter++;
             }
-                Pokemon? Pokemon1 = await pokeClient.GetPokemon(nombre);
+            Pokemon? Pokemon1 = await pokeClient.GetPokemon(nombre);
             return Json(new
             {
                 pokemon = Pokemon1
@@ -47,7 +48,18 @@ namespace PokeDEx.Controllers
             );
         }
 
-        
+        public IActionResult AcompletandoTarjetas()
+        {
+            _counter = _counter -1;
+
+            return Json(new
+            {
+                message = "Todo bien"
+            }
+            );
+        }
+
+
 
         public IActionResult Privacy()
         {
