@@ -3,6 +3,8 @@
 (() => {
 
     const botonManipulacion = document.querySelector('.btn');
+    const cambioFondo = document.querySelector(".botonPelea");
+
 
     let tarjetaExistente = 0;
 
@@ -110,16 +112,21 @@
         contenedor.append(tarjeta);
     }
 
+    const transicionFondo = async (evento) => {
+        const transicion = document.querySelector('.row-2');
+        transicion.style = 'left: 0%';
+        evento.target.setAttribute('hidden', true);
+    }
+
+
     const cerrarTarjeta = async (evento) => {
         const botonCerrar = evento.target.parentNode;
         botonCerrar.remove();
 
-        const response = await fetch('/Home/AcompletandoTarjetas')
         tarjetaExistente = tarjetaExistente - 1;
         const muestraBoton = document.querySelector(".botonPelea");
         muestraBoton.setAttribute("hidden", true);
     }
-
 
     const alHacerClick = async (evento) => {
         const CajadeTexto = evento.target.parentNode.querySelector('input');
@@ -152,6 +159,7 @@
         }
     }
 
+    cambioFondo.addEventListener('click', transicionFondo)
     botonManipulacion.addEventListener('click', alHacerClick, false);
 
 })();

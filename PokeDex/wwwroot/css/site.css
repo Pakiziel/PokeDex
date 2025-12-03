@@ -41,17 +41,40 @@
     letter-spacing: 10px;
 }
 
-
-
-body {
-    background-image: url('../Files/puebloPaleta.webp');
-    background-repeat:round;
-    background-size: cover;
-    background-attachment: fixed;
+.transition {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.transition-row {
+    transition: 2s;
+}
+
+.row-1 {
+    background-image: url('../Files/puebloPaleta.webp');
+    background-repeat: round;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.row-2 {
+    background-image: url('../Files/battle-arena-pokemon-v0-eyepg8yrbxna1.webp');
+    background-repeat: round;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    z-index: -1;
+    left: 100%;
 }
 
 /* --- CONTENEDOR PRINCIPAL Y FORMULARIO --- */
@@ -144,7 +167,7 @@ body {
 }
 
 .btn-cerrar {
-    background:red;
+    background: red;
     padding: 5px 10px;
     position: absolute;
     border-radius: 100px;
@@ -153,7 +176,7 @@ body {
     color: white;
     z-index: 10;
     cursor: pointer;
-    border:none;
+    border: none;
 }
 
 /* Cuerpo de la carta (Título) */
@@ -202,10 +225,9 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 90% 10%;
     height: 80vh;
-    
 }
 
 .earth {
