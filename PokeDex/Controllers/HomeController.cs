@@ -22,6 +22,7 @@ namespace PokeDEx.Controllers
             Generations Pokemon1 = await pokeClient.FirstGenPokemon();
             return View(Pokemon1);
         }
+
         /// <summary>
         /// funcion que devuelve un Pokemon por nombre
         /// </summary>
