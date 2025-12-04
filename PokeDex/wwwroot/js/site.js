@@ -85,6 +85,13 @@
 
         const esconderTache = document.querySelectorAll('.btn-cerrar');
         esconderTache.forEach((tache) => tache.setAttribute('hidden', true));
+
+        const contenedorPrincipal = document.querySelector('main');
+        contenedorPrincipal.classList.add('modo-pelea');
+
+        const contenedorCartas = document.querySelector('.contenedorDeTarjetas');
+        contenedorCartas.style.width = "100 %";
+        contenedorCartas.style.justifyContent = "space-between";
     }
 
     const cerrarTarjeta = async (evento) => {
@@ -112,6 +119,7 @@
                 padding: '1rem',
                 showCloseButton: true,
             });
+
         } else {
             if (CajadeTexto.value != '') {
                 const response = await fetch('/Home/UnicoPokemon', {
