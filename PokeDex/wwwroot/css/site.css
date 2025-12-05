@@ -96,11 +96,30 @@
     padding: 0 50px;
     width: 100%;
     height: 100vh;
+    transition: 2s;
+}
+
+.tarjetaPeque {
+    transform: scale(0.5);
+}
+
+.contenedorDeTarjetas .card:first-child.tarjetaPeque{
+    transform-origin: left center;
+}
+
+.contenedorDeTarjetas .card:last-child.tarjetaPeque{
+    transform-origin: right center;
+}
+
+.modo-pelea .contenedorDeTarjetas{
+    justify-content: space-between !important;
+    padding: 0 10%;
+    width: 25%;
 }
 
 .form-group {
     width: 100%;
-    max-width: 400px; /* Evita que sea gigante en pantallas grandes */
+    max-width: 400px; 
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -112,7 +131,7 @@
         width: 100%;
         padding: 15px;
         border: 2px solid #ddd;
-        border-radius: 25px; /* Bordes redondeados modernos */
+        border-radius: 25px;
         outline: none;
         transition: border-color 0.3s;
     }
@@ -129,8 +148,8 @@
     color: white;
     padding: 14px 28px;
     cursor: pointer;
-    border-radius: 25px; /* Coincide con el input */
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Degradado sutil */
+    border-radius: 25px; /
+    background: linear-gradient(45deg, #007bff, #0056b3);
     font-weight: bold;
     letter-spacing: 10px;
     box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra suave */

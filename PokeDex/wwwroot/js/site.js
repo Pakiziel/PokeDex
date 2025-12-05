@@ -3,7 +3,7 @@
 (() => {
 
     const botonManipulacion = document.querySelector('.btn');
-    const cambioFondo = document.querySelector(".botonPelea");
+    const cambioFondo = document.querySelector('.botonPelea');
 
     let tarjetaExistente = 0;
 
@@ -90,8 +90,13 @@
         contenedorPrincipal.classList.add('modo-pelea');
 
         const contenedorCartas = document.querySelector('.contenedorDeTarjetas');
-        contenedorCartas.style.width = "100 %";
+        contenedorCartas.style.width = "100%";
         contenedorCartas.style.justifyContent = "space-between";
+
+        const tarjetas = document.querySelectorAll('.card');
+        tarjetas.forEach((tarjeta) => {
+            tarjeta.classList.add('tarjetaPeque');
+        });
     }
 
     const cerrarTarjeta = async (evento) => {
